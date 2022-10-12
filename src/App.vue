@@ -1,6 +1,22 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
+import MyButton from "./components/MyButton.vue";
+import { ref, computed } from "vue";
+
+const isYellow = ref(false); // équivalent de useState
+
+function toggleTheme() {
+  isYellow.value = !isYellow.value;
+}
+
+const themeClass = computed(() => { // équivalent de useMemo
+  const classNames = ['wrapper'];
+  if(isYellow.value){
+    classNames.push('bg-yellow');
+  }
+  return classNames;
+});
 </script>
 
 <template>
@@ -13,7 +29,11 @@ import TheWelcome from "./components/TheWelcome.vue";
       height="125"
     />
 
-    <div class="wrapper">
+    <div :class="themeClass">
+      <p>theme is yellow : {{ isYellow }}</p>
+      <MyButton title="Toggle Theme" :onClick="toggleTheme"/>
+      <MyButton title="Click me" color="red" :onClick="() => console.log('test')"/>
+      <MyButton title="Hello Green" color="green" v-bind:rounded="true" />
       <HelloWorld msg="You did it!" />
     </div>
   </header>
@@ -49,5 +69,9 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
+}
+
+.bg-yellow {
+  background-color: yellow;
 }
 </style>
