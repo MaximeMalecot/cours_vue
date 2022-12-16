@@ -7,6 +7,38 @@ defineProps({
 });
 </script>
 
+<!-- 
+  Vue 3 Composition API
+<script>
+export default {
+  name: "HelloWorld",
+  props: {
+    msg: {
+      type: String,
+      required: true,
+    },
+  },
+  setup() {
+  },
+};
+</script>
+-->
+
+<!-- 
+  Vue 2 ou Vue 3 Options API
+<script>
+export default {
+  name: "HelloWorld",
+  props: {
+    msg: {
+      type: String,
+      required: true,
+    },
+  }
+};
+</script>
+-->
+
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>

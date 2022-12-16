@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Faire les courses",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Faire la vaisselle",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Faire le ménage",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Changer la litière du chat",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Arroser les plantes",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Parler à Adrien",
+      "completed": false
+    }
+  ]
+}
