@@ -168,7 +168,7 @@ const duckObject = {
   </header> -->
 
   <main>
-    <template v-if="isYellow">
+    <!-- <template v-if="isYellow">
       <h2>I love Yellow theme</h2>
       <template v-if="count === 2">
         <h2>I have 2 cats</h2>
@@ -198,7 +198,7 @@ const duckObject = {
           <span>{{ title }} - {{ JSON.stringify(item) }}</span>
         </template>
       </List>
-    </div>
+    </div> -->
     <UserView />
   </main>
 </template>

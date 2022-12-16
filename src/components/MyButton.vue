@@ -23,7 +23,6 @@ const props = defineProps({
 });
 
 function handleClick() {
-  console.log("test");
   props.onClick();
 }
 
